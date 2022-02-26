@@ -1,0 +1,20 @@
+{%  extends 'enroll/base.html' %}
+{% block title %} Add_Page {% endblock %}
+{% block content %}
+<div class="row">
+    <div class="col-sm-8 offset-2">
+    <h4 class="alert alert-info">Update Student Informetion</h4>
+    {% for fm in messages %}
+   <h6 class="alert alert-success">{{fm}}</h6> 
+    {% endfor %}
+  <form action="" method="POST">
+  
+      {% csrf_token %}
+      {{form.as_table}}
+      <input type="submit" value="Update" class="btn btn-success btn-sm" > 
+      <a href="{% url 'addandshow' %}" class="btn btn-primary btn-sm"> Back</a>
+  </form>
+ 
+    </div>
+</div>
+ {% endblock %}
