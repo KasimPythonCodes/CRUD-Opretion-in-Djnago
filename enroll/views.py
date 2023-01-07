@@ -16,7 +16,7 @@ def Create_Data(request):
          user.save()
          messages.info(request , 'Submit Data SuccessFully!!')
          return HttpResponseRedirect('/')
-         fm=Sudent_data()
+         # fm=Sudent_data()
    else:
       fm = Sudent_data()
    stu=SudentModel.objects.all()
